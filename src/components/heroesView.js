@@ -1,25 +1,21 @@
 import React, { Component } from 'react' 
 import { View, Text,StyleSheet,TouchableHighlight } from 'react-native'
-import Icon from 'react-native-vector-icons/FontAwesome'
-class dashboardView extends Component{
+
+class heroesViews extends Component{
     static navigationOptions = {
-        title: 'DashBoard',
+        title: 'Heroes',
     };
     render(){
         return(
             <View style={styles.container}>
-                <Text style={styles.title}>Este es el dashboardView</Text>
-                <View>
-                    <Icon name='address-book'/>
-                    <Text>label</Text>
-                </View>
+                <Text style={styles.title}>Este es el heroesViews</Text>
                 <TouchableHighlight 
                         //onPress={(this.onLogin.bind(this))} 
                         //onPress={() => this.props.navigation.navigate('Login')}
-                        onPress={() => this.props.navigation.navigate('Hero')}
+                        onPress={() => this.props.navigation.navigate('Dash')}
                         style={styles.boton} >
                         <Text style={styles.textoBoton}>Ir Atras</Text>
-                </TouchableHighlight>
+                    </TouchableHighlight>
             </View>
         )
     }
@@ -55,4 +51,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default dashboardView
+export default heroesViews
