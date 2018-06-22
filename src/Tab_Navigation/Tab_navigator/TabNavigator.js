@@ -1,16 +1,15 @@
-import React from 'react'
-import { YellowBox } from 'react-native';
-import { createMaterialTopTabNavigator  } from 'react-navigation';
+import React from 'react';
+import { YellowBox } from 'react-native'
+import {createBottomTabNavigator} from 'react-navigation'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
-import DashView from "./dashboardView";
-import HeroView from "./heroesView"
+import HomeSreen from './Screens/HomeScreen'
+import SettingScreen from './Screens/SettingScreen'
 
-
-const TabNav = createMaterialTopTabNavigator ({
-    Dash: { screen: DashView,
+const TabNav = createBottomTabNavigator({
+    Home: { screen: HomeSreen,
         navigationOptions:{
             tabBarLabel:'Home',
             tabBarIcon: ({tintColor}) => (
@@ -18,7 +17,7 @@ const TabNav = createMaterialTopTabNavigator ({
             )
         }
     },
-    Hero: { screen: HeroView,
+    Setting: { screen: SettingScreen,
         navigationOptions:{
             tabBarLabel:'Settings',
             tabBarIcon: ({tintColor}) => (
@@ -28,5 +27,13 @@ const TabNav = createMaterialTopTabNavigator ({
     },
 })
 
-export default TabNav
+// const styles = StyleSheet.create({
+//     container:{
+//         flex:1,
+//         backgroundColor: "#fff",
+//         alignItems: 'center',
+//         justifyContent: 'center',
+//     }
+// })
 
+export default TabNav
