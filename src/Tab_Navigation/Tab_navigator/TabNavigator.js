@@ -13,7 +13,7 @@ const TabNav = createBottomTabNavigator({
         navigationOptions:{
             tabBarLabel:'Home',
             tabBarIcon: ({tintColor}) => (
-                <Icon name="align-justify" size={24} color={tintColor}/>
+                <Icon name="home" size={24} color={tintColor}/>
             )
         }
     },
@@ -25,6 +25,16 @@ const TabNav = createBottomTabNavigator({
             )
         }
     },
+},{
+    initialRouteName:'Home',
+    // order: ['Setting','Home'],
+    navigationOptions:{
+        tabBarVisible:true
+    },
+    tabBarOptions:{
+        activeTintColor:'orange',
+        inactiveTintColor:'grey'
+    }
 })
 
 // const styles = StyleSheet.create({

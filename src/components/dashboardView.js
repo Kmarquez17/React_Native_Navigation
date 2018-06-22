@@ -9,10 +9,6 @@ class dashboardView extends Component{
         return(
             <View style={styles.container}>
                 <Text style={styles.title}>Este es el dashboardView</Text>
-                <View>
-                    <Icon name='address-book'/>
-                    <Text>label</Text>
-                </View>
                 <TouchableHighlight 
                         //onPress={(this.onLogin.bind(this))} 
                         //onPress={() => this.props.navigation.navigate('Login')}

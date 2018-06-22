@@ -1,6 +1,6 @@
 import React from 'react'
 import { YellowBox } from 'react-native';
-import { createMaterialTopTabNavigator  } from 'react-navigation';
+import { createBottomTabNavigator  } from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
@@ -9,7 +9,7 @@ import DashView from "./dashboardView";
 import HeroView from "./heroesView"
 
 
-const TabNav = createMaterialTopTabNavigator ({
+const TabNav = createBottomTabNavigator ({
     Dash: { screen: DashView,
         navigationOptions:{
             tabBarLabel:'Home',
